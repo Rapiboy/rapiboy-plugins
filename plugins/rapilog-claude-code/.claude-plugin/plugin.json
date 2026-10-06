@@ -1,0 +1,13 @@
+{
+  "name": "rapilog",
+  "version": "1.0.0",
+  "description": "Connect an active Rapilog customer account to query shipments and integrate its public API.",
+  "author": {
+    "name": "Rapilog",
+    "url": "https://rapilog.com.ar/"
+  },
+  "homepage": "https://rapilog.com.ar/documentacionapi/",
+  "repository": "https://github.com/Rapiboy/rapiboy-plugins",
+  "license": "MIT",
+  "mcpServers": "./.mcp.json"
+}

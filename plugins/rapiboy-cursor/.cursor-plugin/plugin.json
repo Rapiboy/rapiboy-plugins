@@ -1,0 +1,14 @@
+{
+  "name": "rapiboy",
+  "version": "1.0.0",
+  "description": "Connect an active Rapiboy customer account to query shipments and integrate its public API.",
+  "homepage": "https://rapiboy.com/documentacionapi/",
+  "repository": "https://github.com/Rapiboy/rapiboy-plugins",
+  "license": "MIT",
+  "author": {
+    "name": "Rapiboy"
+  },
+  "logo": "./assets/logo.png",
+  "skills": "./skills/",
+  "mcpServers": "./mcp.json"
+}

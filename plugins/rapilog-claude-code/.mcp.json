@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "rapilog_prod": {
+      "url": "https://mcp.rapilog.com.ar/mcp",
+      "type": "http",
+      "oauth": {
+        "clientId": "rapilog-claude-code",
+        "callbackPort": 8772
+      }
+    }
+  }
+}
