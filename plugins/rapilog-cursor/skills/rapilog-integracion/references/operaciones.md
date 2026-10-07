@@ -10,6 +10,7 @@ Consultar el schema de la herramienta descubierta para conocer los datos requeri
 | NextDaySmart | `nextDaySmartPut` | `PUT /v1/NextDaySmart/Put` | `rapilog:write` |
 | NextDaySmart | `nextDaySmartCancel` | `PUT /v1/NextDaySmart/Cancel` | `rapilog:write` |
 | NextDaySmart | `nextDaySmartGetList` | `GET /v1/NextDaySmart/GetList` | `rapilog:read` |
+| OnDemandSmart | `onDemandSmartConversionMercadoLibre` | `POST /v1/OnDemandSmart/ConversionMercadoLibre` | `rapilog:write` |
 | OnDemandSmart | `onDemandSmartPost` | `POST /v1/OnDemandSmart/Post` | `rapilog:write` |
 | OnDemandSmart | `onDemandSmartGet` | `GET /v1/OnDemandSmart/Get` | `rapilog:read` |
 | OnDemandSmart | `onDemandSmartGetQuery` | `GET /v1/OnDemandSmart/GetQuery` | `rapilog:read` |

@@ -131,6 +131,7 @@
             }
           }
         },
+        "x-mcp-policy": "create",
         "x-mcp-capability": "write"
       }
     },
@@ -242,6 +243,7 @@
             "example": "TRACKING_DE_EJEMPLO"
           }
         ],
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -336,6 +338,7 @@
             "example": "TRACKING_DE_EJEMPLO"
           }
         ],
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -405,6 +408,7 @@
             "example": 900001
           }
         ],
+        "x-mcp-policy": "write",
         "x-mcp-capability": "write"
       }
     },
@@ -447,6 +451,7 @@
             }
           }
         },
+        "x-mcp-policy": "destructive",
         "x-mcp-capability": "write"
       }
     },
@@ -515,7 +520,64 @@
             }
           }
         },
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
+      }
+    },
+    "/v1/OnDemandSmart/ConversionMercadoLibre": {
+      "post": {
+        "tags": [
+          "OnDemandSmart"
+        ],
+        "operationId": "onDemandSmartConversionMercadoLibre",
+        "summary": "Convertir pedido de Mercado Libre Flex",
+        "description": "Convierte un pedido Flex de Mercado Libre en un pedido Rapiboy. Requiere Token en el header, una integración Flex activa de la cuenta autenticada y una dirección de origen configurada. Enviar exactamente uno de IdFlex o IdShipping, con valor positivo. IdFlex identifica el envío de Mercado Libre; IdShipping es la referencia numérica de la orden usada en la búsqueda del vendedor, no un alias de IdFlex. Se consultan únicamente las integraciones de la cuenta. La respuesta se devuelve después de completar la conversión y tiene los mismos campos que OnDemandSmart/Post, incluido IdPedido. Una orden o envío ya convertido se rechaza; ante un resultado incierto, consultar el pedido antes de reintentar.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConversionMercadoLibre"
+              },
+              "example": {
+                "IdFlex": 1230001
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Pedido convertido; respuesta equivalente a la creación de un pedido.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CrearPedidoRespuesta"
+                },
+                "example": {
+                  "IdPedido": 900001,
+                  "TrackingId": "900001",
+                  "Estado": 10,
+                  "Precio": "100.50"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Token, identificador, integración o conversión inválidos; el mensaje depende de la validación.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "Message": "Solicitud inválida."
+                }
+              }
+            }
+          }
+        },
+        "x-mcp-policy": "create",
+        "x-mcp-capability": "write"
       }
     },
     "/v1/OnDemandSmart/Post": {
@@ -598,6 +660,7 @@
             }
           }
         },
+        "x-mcp-policy": "create",
         "x-mcp-capability": "write"
       }
     },
@@ -667,6 +730,7 @@
             }
           }
         },
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -761,6 +825,7 @@
             "example": "TRACKING_DE_EJEMPLO"
           }
         ],
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -827,6 +892,7 @@
             "example": 900001
           }
         ],
+        "x-mcp-policy": "write",
         "x-mcp-capability": "write"
       }
     },
@@ -869,6 +935,7 @@
             }
           }
         },
+        "x-mcp-policy": "destructive",
         "x-mcp-capability": "write"
       }
     },
@@ -937,6 +1004,7 @@
             }
           }
         },
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -1020,6 +1088,7 @@
             }
           }
         },
+        "x-mcp-policy": "create",
         "x-mcp-capability": "write"
       }
     },
@@ -1089,6 +1158,7 @@
             }
           }
         },
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -1183,6 +1253,7 @@
             "example": "TRACKING_DE_EJEMPLO"
           }
         ],
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -1249,6 +1320,7 @@
             "example": 900001
           }
         ],
+        "x-mcp-policy": "write",
         "x-mcp-capability": "write"
       }
     },
@@ -1291,6 +1363,7 @@
             }
           }
         },
+        "x-mcp-policy": "destructive",
         "x-mcp-capability": "write"
       }
     },
@@ -1359,6 +1432,7 @@
             }
           }
         },
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -1442,6 +1516,7 @@
             }
           }
         },
+        "x-mcp-policy": "create",
         "x-mcp-capability": "write"
       }
     },
@@ -1511,6 +1586,7 @@
             }
           }
         },
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -1605,6 +1681,7 @@
             "example": "TRACKING_DE_EJEMPLO"
           }
         ],
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -1671,6 +1748,7 @@
             "example": 900001
           }
         ],
+        "x-mcp-policy": "write",
         "x-mcp-capability": "write"
       }
     },
@@ -1713,6 +1791,7 @@
             }
           }
         },
+        "x-mcp-policy": "destructive",
         "x-mcp-capability": "write"
       }
     },
@@ -1781,6 +1860,7 @@
             }
           }
         },
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -1864,6 +1944,7 @@
             }
           }
         },
+        "x-mcp-policy": "create",
         "x-mcp-capability": "write"
       }
     },
@@ -1933,6 +2014,7 @@
             }
           }
         },
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -2027,6 +2109,7 @@
             "example": "TRACKING_DE_EJEMPLO"
           }
         ],
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -2093,6 +2176,7 @@
             "example": 900001
           }
         ],
+        "x-mcp-policy": "write",
         "x-mcp-capability": "write"
       }
     },
@@ -2135,6 +2219,7 @@
             }
           }
         },
+        "x-mcp-policy": "destructive",
         "x-mcp-capability": "write"
       }
     },
@@ -2203,6 +2288,7 @@
             }
           }
         },
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -2286,6 +2372,7 @@
             }
           }
         },
+        "x-mcp-policy": "create",
         "x-mcp-capability": "write"
       }
     },
@@ -2355,6 +2442,7 @@
             }
           }
         },
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -2449,6 +2537,7 @@
             "example": "TRACKING_DE_EJEMPLO"
           }
         ],
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -2515,6 +2604,7 @@
             "example": 900001
           }
         ],
+        "x-mcp-policy": "write",
         "x-mcp-capability": "write"
       }
     },
@@ -2557,6 +2647,7 @@
             }
           }
         },
+        "x-mcp-policy": "destructive",
         "x-mcp-capability": "write"
       }
     },
@@ -2625,6 +2716,7 @@
             }
           }
         },
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -2708,6 +2800,7 @@
             }
           }
         },
+        "x-mcp-policy": "create",
         "x-mcp-capability": "write"
       }
     },
@@ -2777,6 +2870,7 @@
             }
           }
         },
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -2871,6 +2965,7 @@
             "example": "TRACKING_DE_EJEMPLO"
           }
         ],
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -2937,6 +3032,7 @@
             "example": 900001
           }
         ],
+        "x-mcp-policy": "write",
         "x-mcp-capability": "write"
       }
     },
@@ -2979,6 +3075,7 @@
             }
           }
         },
+        "x-mcp-policy": "destructive",
         "x-mcp-capability": "write"
       }
     },
@@ -3047,6 +3144,7 @@
             }
           }
         },
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -3137,6 +3235,7 @@
             }
           }
         },
+        "x-mcp-policy": "create",
         "x-mcp-capability": "write"
       }
     },
@@ -3237,6 +3336,7 @@
             "example": "TRACKING_DE_EJEMPLO"
           }
         ],
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -3287,6 +3387,7 @@
             }
           }
         },
+        "x-mcp-policy": "create",
         "x-mcp-capability": "write"
       }
     },
@@ -3332,6 +3433,7 @@
             }
           }
         },
+        "x-mcp-policy": "write",
         "x-mcp-capability": "write"
       }
     },
@@ -3375,6 +3477,7 @@
             }
           }
         },
+        "x-mcp-policy": "destructive",
         "x-mcp-capability": "write"
       }
     },
@@ -3446,6 +3549,7 @@
             "description": "Fecha local dd/MM/yyyy. Se rechazan fechas pasadas."
           }
         ],
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -3490,6 +3594,7 @@
             }
           }
         },
+        "x-mcp-policy": "write",
         "x-mcp-capability": "write"
       }
     },
@@ -3545,6 +3650,7 @@
             }
           }
         },
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -3600,6 +3706,7 @@
             }
           }
         },
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -3663,6 +3770,7 @@
             }
           }
         },
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -3727,6 +3835,7 @@
             }
           }
         },
+        "x-mcp-policy": "quote",
         "x-mcp-capability": "quote"
       }
     },
@@ -3784,6 +3893,7 @@
             }
           }
         },
+        "x-mcp-policy": "quote",
         "x-mcp-capability": "quote"
       }
     },
@@ -3840,6 +3950,7 @@
             }
           }
         },
+        "x-mcp-policy": "quote",
         "x-mcp-capability": "quote"
       }
     },
@@ -3904,6 +4015,7 @@
             "example": 900001
           }
         ],
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -3962,6 +4074,7 @@
             "example": 900001
           }
         ],
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -4020,6 +4133,7 @@
             "example": 900001
           }
         ],
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -4078,6 +4192,7 @@
             "example": 900001
           }
         ],
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -4136,6 +4251,7 @@
             "example": 900001
           }
         ],
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -4194,6 +4310,7 @@
             "example": 900001
           }
         ],
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -4252,6 +4369,7 @@
             "example": 900001
           }
         ],
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -4450,6 +4568,7 @@
           }
         },
         "security": [],
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -4568,6 +4687,7 @@
           }
         },
         "security": [],
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -4736,6 +4856,7 @@
           }
         },
         "security": [],
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -4819,6 +4940,7 @@
           }
         },
         "security": [],
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -4936,6 +5058,7 @@
             "example": "TRACKING_DE_EJEMPLO"
           }
         ],
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     },
@@ -4984,6 +5107,7 @@
             }
           }
         },
+        "x-mcp-policy": "destructive",
         "x-mcp-capability": "write"
       }
     },
@@ -5039,6 +5163,7 @@
             "example": 900301
           }
         ],
+        "x-mcp-policy": "read",
         "x-mcp-capability": "read"
       }
     }
@@ -5053,6 +5178,57 @@
       }
     },
     "schemas": {
+      "ConversionMercadoLibre": {
+        "type": "object",
+        "properties": {
+          "IdFlex": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 1,
+            "description": "ID del envío Flex de Mercado Libre. Enviar este campo o IdShipping."
+          },
+          "IdShipping": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 1,
+            "description": "Referencia numérica de la orden de Mercado Libre. Enviar este campo o IdFlex."
+          }
+        },
+        "oneOf": [
+          {
+            "required": [
+              "IdFlex"
+            ],
+            "properties": {
+              "IdFlex": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "IdShipping": {
+                "type": "null"
+              }
+            }
+          },
+          {
+            "required": [
+              "IdShipping"
+            ],
+            "properties": {
+              "IdFlex": {
+                "type": "null"
+              },
+              "IdShipping": {
+                "type": "integer",
+                "minimum": 1
+              }
+            }
+          }
+        ]
+      },
       "Pedido": {
         "type": "object",
         "properties": {
