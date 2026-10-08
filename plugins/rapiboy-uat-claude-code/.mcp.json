@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "rapiboy_uat": {
+      "url": "https://mcp-uat.rapiboy.com/mcp",
+      "type": "http",
+      "oauth": {
+        "clientId": "rapiboy-claude-code",
+        "callbackPort": 8771
+      }
+    }
+  }
+}

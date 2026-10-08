@@ -13,6 +13,16 @@
       "name": "rapilog",
       "source": "./plugins/rapilog-cursor",
       "description": "Para clientes con cuenta activa de Rapilog"
+    },
+    {
+      "name": "rapiboy-uat",
+      "source": "./plugins/rapiboy-uat-cursor",
+      "description": "Para clientes que prueban integraciones en UAT de Rapiboy"
+    },
+    {
+      "name": "rapilog-uat",
+      "source": "./plugins/rapilog-uat-cursor",
+      "description": "Para clientes que prueban integraciones en UAT de Rapilog"
     }
   ]
 }

@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "rapiboy_uat": {
+      "url": "https://mcp-uat.rapiboy.com/mcp",
+      "auth": {
+        "CLIENT_ID": "rapiboy-cursor"
+      }
+    }
+  }
+}

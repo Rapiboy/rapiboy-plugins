@@ -1,6 +1,6 @@
 # Rapiboy y Rapilog: plugins para clientes
 
-Paquetes para clientes con cuenta activa de Rapiboy o Rapilog. Cada marca se conecta a su MCP de producción y sólo permite operar la cuenta autorizada mediante OAuth, según sus permisos y modalidad. Las tarifas y facturación de los envíos siguen fuera del asistente. Nunca pegar el token API o la contraseña en el chat.
+Cuatro variantes por plataforma: Rapiboy, Rapilog, Rapiboy · UAT y Rapilog · UAT. Los paquetes sin sufijo apuntan a producción; los paquetes `-uat` apuntan exclusivamente a UAT para clientes que prueban integraciones con datos de ejemplo. Cada conexión opera sólo la cuenta autorizada mediante OAuth, según sus permisos y modalidad. La autorización de UAT es independiente de producción. Nunca pegar el token API o la contraseña en el chat.
 
 Repositorio: https://github.com/Rapiboy/rapiboy-plugins
 

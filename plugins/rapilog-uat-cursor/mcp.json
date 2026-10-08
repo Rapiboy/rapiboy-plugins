@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "rapilog_uat": {
+      "url": "https://mcp-uat.rapilog.com.ar/mcp",
+      "auth": {
+        "CLIENT_ID": "rapilog-cursor"
+      }
+    }
+  }
+}

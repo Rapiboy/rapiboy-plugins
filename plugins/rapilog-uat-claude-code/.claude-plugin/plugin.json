@@ -1,0 +1,13 @@
+{
+  "name": "rapilog-uat",
+  "version": "1.0.0",
+  "description": "For Rapilog customers developing integrations in the UAT test environment.",
+  "author": {
+    "name": "Rapilog",
+    "url": "https://rapilog.com.ar/"
+  },
+  "homepage": "https://uat.rapilog.com.ar/documentacionapi/",
+  "repository": "https://github.com/Rapiboy/rapiboy-plugins",
+  "license": "MIT",
+  "mcpServers": "./.mcp.json"
+}
