@@ -9,5 +9,10 @@
   "homepage": "https://uat.rapiboy.com/documentacionapi/",
   "repository": "https://github.com/Rapiboy/rapiboy-plugins",
   "license": "MIT",
+  "displayName": "Rapiboy · UAT",
+  "documentationUrl": "https://uat.rapiboy.com/documentacionapi/",
+  "supportUrl": "https://rapiboy.com/Home/Contacto5",
+  "privacyPolicyUrl": "https://rapiboy.com/Home/PrivacidadApiMcp",
+  "termsOfServiceUrl": "https://rapiboy.com/Home/TerminosCondicionesRapiboy",
   "mcpServers": "./.mcp.json"
 }

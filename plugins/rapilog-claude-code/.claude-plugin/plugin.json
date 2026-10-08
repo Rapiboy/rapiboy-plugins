@@ -9,5 +9,10 @@
   "homepage": "https://rapilog.com.ar/documentacionapi/",
   "repository": "https://github.com/Rapiboy/rapiboy-plugins",
   "license": "MIT",
+  "displayName": "Rapilog",
+  "documentationUrl": "https://rapilog.com.ar/documentacionapi/",
+  "supportUrl": "https://rapilog.com.ar/#soporte",
+  "privacyPolicyUrl": "https://rapilog.com.ar/Home/PrivacidadApiMcp",
+  "termsOfServiceUrl": "https://rapilog.com.ar/Home/TerminosCondicionesRapilog",
   "mcpServers": "./.mcp.json"
 }
